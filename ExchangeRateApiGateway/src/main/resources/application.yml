@@ -1,0 +1,41 @@
+server:
+  port: 9090
+
+spring:
+  cloud:
+    gateway:
+      routes:
+      - id: exchange_Rates_Data_Currencies_From_APi
+        uri: http://localhost:8080
+        predicates:
+        - Path=/exchange_rate/get_exchangerates/all_currencies/from_api_to_db
+               
+      - id: exchange_Rates_Between_Dates
+        uri: http://localhost:8080
+        predicates:        
+        - Path=/exchange_rate/get_exchangerates/between_dates
+        
+      - id: exchange_Rates_Data__By_Date_Currency_From_Db
+        uri: http://localhost:8080
+        predicates:        
+        - Path=/exchange_rate/get_exchangerates/from_db/by_date_currency
+      
+      
+      - id: exchange_Rates_By_Date_Currency_From_Api
+        uri: http://localhost:8080
+        predicates:        
+        - Path=/exchange_rate/get_exchangerates/by_date_currency/from_rate_api 
+
+
+
+      
+      - id: exchange_Rates_All_Datas_From_Db
+        uri: http://localhost:8080
+        predicates:        
+        - Path=/exchange_rate/get_all_datas/from_db
+
+
+      - id: exchange_Rates_currency_by_date_currency_From_Rateapi_to_db
+        uri: http://localhost:8080
+        predicates:        
+        - Path=exchange_rate/get_exchangerates/currency/from_api/load_to_db

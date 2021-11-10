@@ -1,0 +1,11 @@
+com.exchange.rate.io
+com.exchange.rate.io.controller
+com.exchange.rate.io.exception
+com.exchange.rate.io.model
+com.exchange.rate.io.repository
+com.exchange.rate.io.service
+com.exchangerate.constants
+com.exchangeRate.controllerTest
+com.exchangerate.utilities
+com.rate.repository.service.test
+com.servicetest
